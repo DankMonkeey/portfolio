@@ -11,6 +11,7 @@ import { BackgroundGradientAnimation } from "./GradientBg";
 import GridGlobe from "./GridGlobe";
 import animationData from "@/data/confetti.json";
 import MagicButton from "../MagicButton";
+import { Spotlight } from "../ui/Spotlight";
 
 export const BentoGrid = ({
   className,
@@ -52,8 +53,8 @@ export const BentoGridItem = ({
   titleClassName?: string;
   spareImg?: string;
 }) => {
-  const leftLists = ["ReactJS", "Express", "Typescript"];
-  const rightLists = ["VueJS", "NuxtJS", "GraphQL"];
+  const leftLists = ["Canon", "Tripod", "Lenses"];
+  const rightLists = ["Microphone", "Lighting Kits", "Stabilzer"];
 
   const [copied, setCopied] = useState(false);
 
@@ -67,7 +68,7 @@ export const BentoGridItem = ({
   };
 
   const handleCopy = () => {
-    const text = "hsu@jsmastery.pro";
+    const text = "ecom.yassine.bq@gmail.com";
     navigator.clipboard.writeText(text);
     setCopied(true);
   };
@@ -99,8 +100,9 @@ export const BentoGridItem = ({
           )}
         </div>
         <div
-          className={`absolute right-0 -bottom-5 ${id === 5 && "w-full opacity-80"
-            } `}
+          className={`absolute right-0 -bottom-5 ${
+            id === 5 && "w-full opacity-80"
+          } `}
         >
           {spareImg && (
             <img
@@ -136,6 +138,23 @@ export const BentoGridItem = ({
             {title}
           </div>
 
+          {/* for the github 3d globe */}
+          {id === 1 && (
+            <div>
+              <Spotlight
+                className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"
+                fill="white"
+              />
+              <Spotlight
+                className="h-[80vh] w-[50vw] top-10 left-full"
+                fill="purple"
+              />
+              <Spotlight
+                className="left-80 top-28 h-[80vh] w-[50vw]"
+                fill="blue"
+              />
+            </div>
+          )}
           {/* for the github 3d globe */}
           {id === 2 && <GridGlobe />}
 
@@ -176,8 +195,9 @@ export const BentoGridItem = ({
               {/* remove focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 */}
               {/* add handleCopy() for the copy the text */}
               <div
-                className={`absolute -bottom-5 right-0 ${copied ? "block" : "block"
-                  }`}
+                className={`absolute -bottom-5 right-0 ${
+                  copied ? "block" : "block"
+                }`}
               >
                 {/* <img src="/confetti.gif" alt="confetti" /> */}
                 <Lottie options={defaultOptions} height={200} width={400} />

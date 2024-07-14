@@ -1,83 +1,125 @@
 "use client";
 
-import { FaLocationArrow } from "react-icons/fa6";
-
+import Image from "next/image";
+import React, { useState , useEffect} from "react";
+import { CardBody, CardContainer, CardItem } from "./ui/Pin";
 import { projects } from "@/data";
-import { PinContainer } from "./ui/Pin";
+import Link from "next/link";
+import { BackgroundGradient } from "./ui/background-gradient";
+import { IconAppWindow } from "@tabler/icons-react";
+import FullScreenVideo from "./ui/FullScreenVideo"; // Import the custom video component
+import { TextGenerateEffect } from "./ui/TextGenerateEffect";
+import { useSpring, animated } from "react-spring"; // Import useSpring and animated from react-spring
+import { useSwipeable } from "react-swipeable"; // Import Swipeable from react-swipeable
 
-const RecentProjects = () => {
+
+export function BackgroundGradientDemo() {
+  const [selectedCategory, setSelectedCategory] = useState<string>("All");
+  const [isPhoneOrTablet, setIsPhoneOrTablet] = useState(false);
+  const [slideIndex, setSlideIndex] = useState(0);
+
+  const categories = [
+    "All",
+    ...Array.from(new Set(projects.map((project) => project.category))),
+  ];
+
+  const filteredProjects =
+    selectedCategory === "All"
+      ? projects
+      : projects.filter((project) => project.category === selectedCategory);
+
+  const buttonWidth = 120;
+  const totalWidth = categories.length * buttonWidth;
+
+  const slideProps = useSpring({
+    transform: `translateX(${-slideIndex * buttonWidth}px)`,
+    config: {
+      tension: 200,
+      friction: 20,
+    },
+  });
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsPhoneOrTablet(window.innerWidth <= 768);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  // Setup swipe handlers for phone or tablet
+  const handlers = useSwipeable({
+    onSwipedLeft: () => {
+      if (slideIndex < categories.length - 1) {
+        setSlideIndex(slideIndex + 1);
+      }
+    },
+    onSwipedRight: () => {
+      if (slideIndex > 0) {
+        setSlideIndex(slideIndex - 1);
+      }
+    },
+  });
+
+  const categoryNavStyle = {
+    ...slideProps,
+    minWidth: "70%",
+    width: `${totalWidth}px`,
+    display: "flex",
+    justifyContent: isPhoneOrTablet ? "flex-start" : "center",
+  };
+
   return (
-    <div className="py-20" id="projects">
+    <div className="my-10" id="projects">
       <h1 className="heading">
         A small selection of{" "}
         <span className="text-purple">recent projects</span>
       </h1>
-      <div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10">
-        {projects.map((item) => (
-          <div
-            className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
-            key={item.id}
-          >
-            <PinContainer
-              title="/ui.aceternity.com"
-              href="https://twitter.com/mannupaaji"
+
+      {/* Swipeable Category Navigation */}
+      <div className="flex justify-center my-16 overflow-x-auto" {...handlers}>
+        <animated.div style={categoryNavStyle}>
+          {categories.map((category) => (
+            <button
+              key={category}
+              onClick={() => setSelectedCategory(category)}
+              className={`px-2 py-2 rounded-lg ${
+                selectedCategory === category
+                  ? "bg-[#e88cff0e] text-white border-2"
+                  : "bg-transparent"
+              }`}
+              style={{ minWidth: `${buttonWidth}px` }}
             >
-              <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
-                <div
-                  className="relative w-full h-full overflow-hidden lg:rounded-3xl"
-                  style={{ backgroundColor: "#13162D" }}
-                >
-                  <img src="/bg.png" alt="bgimg" />
-                </div>
-                <img
-                  src={item.img}
-                  alt="cover"
-                  className="z-10 absolute bottom-0"
-                />
-              </div>
+              {category}
+            </button>
+          ))}
+        </animated.div>
+      </div>
 
-              <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
-                {item.title}
-              </h1>
-
-              <p
-                className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2"
-                style={{
-                  color: "#BEC1DD",
-                  margin: "1vh 0",
-                }}
-              >
-                {item.des}
-              </p>
-
-              <div className="flex items-center justify-between mt-7 mb-3">
-                <div className="flex items-center">
-                  {item.iconLists.map((icon, index) => (
-                    <div
-                      key={index}
-                      className="border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
-                      style={{
-                        transform: `translateX(-${5 * index + 2}px)`,
-                      }}
-                    >
-                      <img src={icon} alt="icon5" className="p-2" />
-                    </div>
-                  ))}
-                </div>
-
-                <div className="flex justify-center items-center">
-                  <p className="flex lg:text-xl md:text-xs text-sm text-purple">
-                    Check Live Site
-                  </p>
-                  <FaLocationArrow className="ms-3" color="#CBACF9" />
-                </div>
-              </div>
-            </PinContainer>
-          </div>
+      {/* Projects Grid */}
+      <div
+        className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 mt-4 mx-10 items-center justify-center gap-16"
+        id="father"
+      >
+        {filteredProjects.map((item, index) => (
+          <BackgroundGradient
+            className="rounded-[22px] max-w-sm overflow-hidden bg-white dark:bg-zinc-900"
+            key={index}
+          >
+            <FullScreenVideo
+              id={item.vidid}
+              src={item.vid}
+              className="object-contain max-w-sm w-full mx-auto relative lg:h-[27rem] h-[22rem] rounded-3xl"
+            />
+          </BackgroundGradient>
         ))}
       </div>
     </div>
   );
-};
+}
 
-export default RecentProjects;
+export default BackgroundGradientDemo;
