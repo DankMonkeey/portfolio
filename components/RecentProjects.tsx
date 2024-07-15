@@ -113,7 +113,7 @@ export function BackgroundGradientDemo() {
             <FullScreenVideo
               id={item.vidid}
               src={item.vid}
-              className="object-contain max-w-sm w-full mx-auto relative lg:h-[27rem] h-[22rem] rounded-3xl"
+              className="object-contain max-w-sm w-full mx-auto relative lg:h-[27rem] h-[23rem] rounded-3xl"
             />
           </BackgroundGradient>
         ))}
