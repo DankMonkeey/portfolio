@@ -10,13 +10,12 @@ export const navItems = [
 export const gridItems = [
   {
     id: 1,
-    title:
-      "Collaboration avec les clients, favorisant une communication ouverte",
+    title: "",
     description: "",
     className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
-    imgClassName: "w-[50%] h-[100%] object-contain ml-auto ",
-    titleClassName: "justify-end font-[12px]",
-    img: "/images/portrait.png",
+    imgClassName: "",
+    titleClassName: "justify-end  font-[12px]",
+    img: "",
     spareImg: "",
   },
   {
@@ -26,7 +25,7 @@ export const gridItems = [
     description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
-    titleClassName: "justify-start",
+    titleClassName: "justify-start p-5",
     img: "",
     spareImg: "",
   },
@@ -36,7 +35,7 @@ export const gridItems = [
     description: "dernière technologie",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
-    titleClassName: "justify-center",
+    titleClassName: "justify-center p-5",
     img: "",
     spareImg: "",
   },
@@ -46,7 +45,7 @@ export const gridItems = [
     description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-1",
     imgClassName: "",
-    titleClassName: "justify-start",
+    titleClassName: "justify-start p-5",
     img: "/grid.svg",
     spareImg: "/b4.svg",
   },
@@ -57,7 +56,7 @@ export const gridItems = [
     description: "The Inside Scoop",
     className: "md:col-span-3 md:row-span-2",
     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
-    titleClassName: "justify-center md:justify-start lg:justify-center",
+    titleClassName: "justify-center p-5 md:justify-start lg:justify-center",
   },
   {
     id: 6,
@@ -65,7 +64,7 @@ export const gridItems = [
     description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-1",
     imgClassName: "",
-    titleClassName: "justify-center md:max-w-full max-w-60 text-center",
+    titleClassName: "justify-center p-5 md:max-w-full max-w-60 text-center",
     img: "",
     spareImg: "",
   },
@@ -211,6 +210,8 @@ export const workExperience = [
     desc: "Capturez la joie et le romantisme des mariages à travers de superbes photos et des vidéos cinématographiques. Chaque instant est méticuleusement documenté pour créer des souvenirs impérissables.",
     className: "md:col-span-2",
     thumbnail: "/mic.png",
+    height: 200,
+    width: 200,
   },
   {
     id: 2,
@@ -218,12 +219,16 @@ export const workExperience = [
     desc: "Fournir une couverture photo et vidéo complète pour les événements d'entreprise, en garantissant que chaque détail et chaque point culminant sont capturés de manière professionnelle à des fins de promotion et d'archivage.",
     className: "md:col-span-2", // change to md:col-span-2
     thumbnail: "/exp2.svg",
+    height: 200,
+    width: 200,
   },
   {
     id: 3,
     title: "Mode shoots et lifestyle",
     desc: "Présenter l’essence de la mode et du style de vie à travers des visuels créatifs et dynamiques. Collaborer avec des modèles et des designers pour donner vie à leurs visions.",
     className: "md:col-span-2", // change to md:col-span-2
+    height: 200,
+    width: 200,
     thumbnail: "/exp3.svg",
   },
   {
@@ -231,6 +236,8 @@ export const workExperience = [
     title: "Photographie de voyage et d'aventure",
     desc: "Explorer des paysages à couper le souffle et des cultures vibrantes, capturant l'essence du voyage et de l'aventure. Fournir des images de haute qualité qui racontent l’histoire de chaque voyage.",
     className: "md:col-span-2",
+    height: 200,
+    width: 200,
     thumbnail: "/cam.png",
   },
 ];

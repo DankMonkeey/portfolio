@@ -9,6 +9,7 @@ import { cn } from "@/lib/utils";
 
 import { BackgroundGradientAnimation } from "./GradientBg";
 import GridGlobe from "./GridGlobe";
+import Portrait from "./Portrait";
 import animationData from "@/data/confetti.json";
 import MagicButton from "../MagicButton";
 import { Spotlight } from "../ui/Spotlight";
@@ -96,7 +97,7 @@ export const BentoGridItem = ({
             <img
               src={img}
               alt={img}
-              className={cn(imgClassName, "object-cover object-center ")}
+              className={cn(imgClassName, "object-contain object-center ")}
             />
           )}
         </div>
@@ -110,7 +111,7 @@ export const BentoGridItem = ({
               src={spareImg}
               alt={spareImg}
               //   width={220}
-              className="object-cover object-center w-full h-full"
+              className="object-contain object-center w-full h-full"
             />
           )}
         </div>
@@ -124,7 +125,7 @@ export const BentoGridItem = ({
         <div
           className={cn(
             titleClassName,
-            "group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10"
+            "group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-40 flex flex-col px-5"
           )}
         >
           {/* change the order of the title and des, font-extralight, remove text-xs text-neutral-600 dark:text-neutral-300 , change the text-color */}
@@ -142,6 +143,7 @@ export const BentoGridItem = ({
           {/* for the github 3d globe */}
           {id === 1 && (
             <div>
+              <Portrait />
               <Spotlight
                 className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"
                 fill="white"
