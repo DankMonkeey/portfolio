@@ -46,15 +46,14 @@ const Hero = () => {
             DYNAMIC VISUAL MAGIC
           </p>
 
-         
           <TextGenerateEffect
-            words="Transforming Moments into Timeless Stories with Creativity and Precision"
+            words="Transforming Moments into Timeless Stories"
             className="text-center text-[40px] md:text-5xl lg:text-6xl"
           />
 
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-            Hi! I&apos;m Yessine, a professional Photo/ Videographer
-            based in Morocco.
+            Hi! I&apos;m Yessine, a professional Photo/ Videographer based in
+            Morocco.
           </p>
 
           <a href="#projects">
