@@ -1,4 +1,6 @@
 import React from "react";
+import Image from "next/image";
+
 
 import { workExperience } from "@/data";
 import { Button } from "./ui/MovingBorders";
@@ -8,14 +10,13 @@ const Experience = () => {
   return (
     <div className="py-20 w-full">
       <h1 className="heading">
-        My <span className="text-purple">work experience</span>
+        Mon <span className="text-purple">experience professionnelle</span>
       </h1>
 
       <div className="w-full mt-12 grid lg:grid-cols-4 grid-cols-1 gap-10">
         {workExperience.map((card) => (
           <Button
             key={card.id}
-            //   random duration will be fun , I think , may be not
             duration={Math.floor(Math.random() * 10000) + 10000}
             borderRadius="1.75rem"
             style={{
