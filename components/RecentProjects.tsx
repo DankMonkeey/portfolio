@@ -76,8 +76,8 @@ export function BackgroundGradientDemo() {
   return (
     <div className="my-10" id="projects">
       <h1 className="heading">
-        A small selection of{" "}
-        <span className="text-purple">recent projects</span>
+        Une petite sélection de{" "}
+        <span className="text-purple">projets récents</span>
       </h1>
 
       {/* Swipeable Category Navigation */}

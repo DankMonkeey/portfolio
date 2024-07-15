@@ -17,12 +17,12 @@ const Footer = () => {
 
       <div className="flex flex-col items-center">
         <h1 className="heading lg:max-w-[45vw]">
-          Ready to elevate <span className="text-purple">your</span> visual
-          storytelling?
+          prêt à élever <span className="text-purple">votre</span>
+          narration visuelle?
         </h1>
         <p className="text-white-200 md:mt-10 my-5 text-center">
-          Reach out to me today and let&apos;s discuss how I can help you
-          achieve your goals.
+          Contactez-moi aujourd'hui et discutons de la façon dont je peux vous
+          aider atteint tes objectifs.
         </p>
         <a href="mailto:ecom.yassine.bq@gmail.com">
           <MagicButton
@@ -46,7 +46,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300"
             >
-              <img src={info.img}  width={20} height={20} />
+              <img src={info.img} width={20} height={20} />
             </a>
           ))}
         </div>

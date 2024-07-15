@@ -10,17 +10,19 @@ export const navItems = [
 export const gridItems = [
   {
     id: 1,
-    title: "I prioritize client collaboration, fostering open communication ",
+    title:
+      "Collaboration avec les clients, favorisant une communication ouverte",
     description: "",
     className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
     imgClassName: "w-[50%] h-[100%] object-contain ml-auto ",
-    titleClassName: "justify-end",
+    titleClassName: "justify-end font-[12px]",
     img: "/images/portrait.png",
     spareImg: "",
   },
   {
     id: 2,
-    title: "I'm very flexible with time zone communications",
+    title:
+      "Je suis très flexible pour les communications selon les fuseaux horaires.",
     description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
@@ -30,8 +32,8 @@ export const gridItems = [
   },
   {
     id: 3,
-    title: "My tech stack",
-    description: "I constantly try to improve",
+    title: "Mon stack tech",
+    description: "dernière technologie",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
     titleClassName: "justify-center",
@@ -40,7 +42,7 @@ export const gridItems = [
   },
   {
     id: 4,
-    title: "Tech enthusiast with a passion for development.",
+    title: "Vidéaste passionné de technologie et de storytelling.",
     description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-1",
     imgClassName: "",
@@ -56,7 +58,6 @@ export const gridItems = [
     className: "md:col-span-3 md:row-span-2",
     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
     titleClassName: "justify-center md:justify-start lg:justify-center",
-    
   },
   {
     id: 6,
@@ -206,29 +207,29 @@ export const companies = [
 export const workExperience = [
   {
     id: 1,
-    title: "Wedding Photography and Videography",
-    desc: "Capturing the joy and romance of weddings through stunning photos and cinematic videos. Each moment is meticulously documented to create lasting memories.",
+    title: "Photographie et vidéographie de mariage",
+    desc: "Capturez la joie et le romantisme des mariages à travers de superbes photos et des vidéos cinématographiques. Chaque instant est méticuleusement documenté pour créer des souvenirs impérissables.",
     className: "md:col-span-2",
     thumbnail: "/mic.png",
   },
   {
     id: 2,
-    title: "Corporate Event Coverage",
-    desc: "Providing comprehensive photo and video coverage for corporate events, ensuring every detail and highlight is professionally captured for promotional and archival purposes.",
+    title: "Couverture d'événements d'entreprise",
+    desc: "Fournir une couverture photo et vidéo complète pour les événements d'entreprise, en garantissant que chaque détail et chaque point culminant sont capturés de manière professionnelle à des fins de promotion et d'archivage.",
     className: "md:col-span-2", // change to md:col-span-2
     thumbnail: "/exp2.svg",
   },
   {
     id: 3,
-    title: "Fashion and Lifestyle Shoots",
-    desc: "Showcasing the essence of fashion and lifestyle through creative and dynamic visuals. Collaborating with models and designers to bring their visions to life.",
+    title: "Mode shoots et lifestyle",
+    desc: "Présenter l’essence de la mode et du style de vie à travers des visuels créatifs et dynamiques. Collaborer avec des modèles et des designers pour donner vie à leurs visions.",
     className: "md:col-span-2", // change to md:col-span-2
     thumbnail: "/exp3.svg",
   },
   {
     id: 4,
-    title: "Travel and Adventure Photography",
-    desc: "Exploring breathtaking landscapes and vibrant cultures, capturing the essence of travel and adventure. Delivering high-quality images that tell the story of each journey.",
+    title: "Photographie de voyage et d'aventure",
+    desc: "Explorer des paysages à couper le souffle et des cultures vibrantes, capturant l'essence du voyage et de l'aventure. Fournir des images de haute qualité qui racontent l’histoire de chaque voyage.",
     className: "md:col-span-2",
     thumbnail: "/cam.png",
   },

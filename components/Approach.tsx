@@ -7,15 +7,15 @@ const Approach = () => {
   return (
     <section className="w-full py-20">
       <h1 className="heading">
-        My <span className="text-purple">approach</span>
+        Mon <span className="text-purple">approche</span>
       </h1>
       {/* remove bg-white dark:bg-black */}
       <div className="my-20 flex flex-col lg:flex-row items-center justify-center w-full gap-4">
         {/* add des prop */}
         <Card
-          title="Concept & Planning"
+          title="Concept et planification"
           icon={<AceternityIcon order="Phase 1" />}
-          des="We'll work together to understand your vision and goals for the shoot. Whether it's a wedding, corporate event, or a personal portrait session, we'll discuss themes, styles, and specific shots you have in mind. This stage ensures that every detail is meticulously planned to capture the essence of your story."
+          des="Nous travaillerons ensemble pour comprendre votre vision et vos objectifs pour le tournage. Qu'il s'agisse d'un mariage, d'un événement d'entreprise ou d'une séance de portrait personnel, nous discuterons des thèmes, des styles et des clichés spécifiques que vous avez en tête. Cette étape garantit que chaque détail est méticuleusement planifié pour capturer l’essence de votre histoire."
         >
           <CanvasRevealEffect
             animationSpeed={5.1}
@@ -24,9 +24,9 @@ const Approach = () => {
           />
         </Card>
         <Card
-          title="Shooting & Production"
+          title="Tournage et réalisation"
           icon={<AceternityIcon order="Phase 2" />}
-          des="Once we have a clear plan, I begin the creative process. With my equipment ready and a keen eye for detail, I capture high-quality images and videos. Throughout the shoot, I'll provide updates and previews to ensure we're on the right track, making adjustments as needed to achieve the best results."
+          des="Une fois que nous avons un plan clair, je commence le processus créatif. Avec mon équipement prêt et un sens aigu du détail, je capture des images et des vidéos de haute qualité. Tout au long du tournage, je fournirai des mises à jour et des aperçus pour m'assurer que nous sommes sur la bonne voie, en effectuant les ajustements nécessaires pour obtenir les meilleurs résultats."
         >
           <CanvasRevealEffect
             animationSpeed={3}
@@ -44,9 +44,9 @@ const Approach = () => {
           {/* <div className="absolute inset-0 [mask-image:radial-gradient(400px_at_center,white,transparent)] bg-black/50 dark:bg-black/90" /> */}
         </Card>
         <Card
-          title="Editing & Delivery"
+          title="Édition et livraison"
           icon={<AceternityIcon order="Phase 3" />}
-          des="This is where your vision comes to life! Using professional editing software, I'll enhance and refine the captured footage and photos. From color correction to sound design, each element is carefully crafted. Once the editing is complete, you'll receive the final high-resolution images and videos, ready to be shared and cherished."
+          des="C'est ici que votre vision prend vie ! À l’aide d’un logiciel de montage professionnel, j’améliorerai et affinerai les séquences et les photos capturées. De la correction des couleurs à la conception sonore, chaque élément est soigneusement conçu. Une fois le montage terminé, vous recevrez les images et vidéos finales haute résolution, prêtes à être partagées et chéries."
         >
           <CanvasRevealEffect
             animationSpeed={3}
