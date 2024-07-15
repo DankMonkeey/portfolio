@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+
 import React, { useState , useEffect} from "react";
 import { CardBody, CardContainer, CardItem } from "./ui/Pin";
 import { projects } from "@/data";

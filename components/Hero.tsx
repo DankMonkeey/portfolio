@@ -47,7 +47,6 @@ const Hero = () => {
           </p>
 
           <TextGenerateEffect
-<<<<<<< HEAD
             words="Transforming Moments into Timeless Stories"
             className="text-center text-[40px] md:text-5xl lg:text-6xl"
           />
@@ -55,15 +54,6 @@ const Hero = () => {
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
             Hi! I&apos;m Yessine, a professional Photo/ Videographer based in
             Morocco.
-=======
-            words="Transforming Moments into Timeless Stories "
-            className="text-center text-[30px] md:text-5xl lg:text-6xl"
-          />
-
-          <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-            Salut! Je m&apos;appelle Yessine, vidéaste professionnelle basée au
-            Maroc.
->>>>>>> 1711502a84597529d25b3b68e327091716963f6a
           </p>
 
           <a href="#projects">
