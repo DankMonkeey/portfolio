@@ -6,7 +6,7 @@ import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 
 const Hero = () => {
   return (
-    <div className="pb-20 pt-20">
+    <div className="pb-16 pt-20">
       {/**
        *  UI: Spotlights
        *  Link: https://ui.aceternity.com/components/spotlight
@@ -43,10 +43,11 @@ const Hero = () => {
       <div className="flex justify-center relative my-20 z-10">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
           <p className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
-            DYNAMIC VISUAL MAGIC
+            MAGIE VISUELLE DYNAMIQUE
           </p>
 
           <TextGenerateEffect
+<<<<<<< HEAD
             words="Transforming Moments into Timeless Stories"
             className="text-center text-[40px] md:text-5xl lg:text-6xl"
           />
@@ -54,11 +55,20 @@ const Hero = () => {
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
             Hi! I&apos;m Yessine, a professional Photo/ Videographer based in
             Morocco.
+=======
+            words="Transforming Moments into Timeless Stories "
+            className="text-center text-[30px] md:text-5xl lg:text-6xl"
+          />
+
+          <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
+            Salut! Je m&apos;appelle Yessine, vidéaste professionnelle basée au
+            Maroc.
+>>>>>>> 1711502a84597529d25b3b68e327091716963f6a
           </p>
 
           <a href="#projects">
             <MagicButton
-              title="Show my work"
+              title="Montrer mon travail"
               icon={<FaLocationArrow />}
               position="right"
             />
