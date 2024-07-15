@@ -52,7 +52,7 @@ const Hero = () => {
           />
 
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-            Salut! Je m'appelle Yessine, vidéaste professionnelle basée au
+            Salut! Je m&apos;appelle Yessine, vidéaste professionnelle basée au
             Maroc.
           </p>
 
