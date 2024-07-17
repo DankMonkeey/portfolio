@@ -6,14 +6,13 @@ import Lottie from "react-lottie";
 
 import { cn } from "@/lib/utils";
 
-
 import { BackgroundGradientAnimation } from "./GradientBg";
 import GridGlobe from "./GridGlobe";
 import Portrait from "./Portrait";
 import animationData from "@/data/confetti.json";
 import MagicButton from "../MagicButton";
 import { Spotlight } from "../ui/Spotlight";
-import Image from "next/image";
+import Text from "../ui/text";
 
 export const BentoGrid = ({
   className,
@@ -121,6 +120,11 @@ export const BentoGridItem = ({
             <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl"></div>
           </BackgroundGradientAnimation>
         )}
+        {id === 3 && (
+          // add background animation , remove the p tag
+
+          <Text />
+        )}
 
         <div
           className={cn(
@@ -143,7 +147,7 @@ export const BentoGridItem = ({
           {/* for the github 3d globe */}
           {id === 1 && (
             <div>
-              <Portrait />
+              <Portrait/>
               <Spotlight
                 className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"
                 fill="white"
@@ -162,7 +166,7 @@ export const BentoGridItem = ({
           {id === 2 && <GridGlobe />}
 
           {/* Tech stack list div */}
-          
+
           {id === 6 && (
             <div className="mt-5 relative">
               {/* button border magic from tailwind css buttons  */}
