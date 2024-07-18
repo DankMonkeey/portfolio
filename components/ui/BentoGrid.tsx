@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 
 import { BackgroundGradientAnimation } from "./GradientBg";
 import GridGlobe from "./GridGlobe";
-import Portrait from "./Portrait";
+
 import animationData from "@/data/confetti.json";
 import MagicButton from "../MagicButton";
 import { Spotlight } from "../ui/Spotlight";
@@ -147,7 +147,13 @@ export const BentoGridItem = ({
           {/* for the github 3d globe */}
           {id === 1 && (
             <div>
-              <Portrait/>
+              <img
+                src="/portrait.png"
+                alt=""
+                width={300}
+                height={300}
+                className="object-cover ml-auto "
+              />
               <Spotlight
                 className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"
                 fill="white"
