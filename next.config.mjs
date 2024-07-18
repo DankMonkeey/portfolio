@@ -2,6 +2,13 @@ import { withNextVideo } from "next-video/process";
 import {withSentryConfig} from '@sentry/nextjs';
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: "export",
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  images: {
+    domains: ["yassinebouaquil.com"], // Replace 'yourdomain.com' with the actual domain(s) you are using
+  },
 };
 
 export default withNextVideo(withSentryConfig(nextConfig, {

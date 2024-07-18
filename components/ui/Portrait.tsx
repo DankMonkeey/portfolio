@@ -6,7 +6,7 @@ const Portrait = () => {
   return (
     <div className="w-[300px] h-full ml-auto">
       <Image
-        src="/images/portrait.png"
+        src="/portrait.png"
         alt=""
         quality={100}
         width={500}
