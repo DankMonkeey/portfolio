@@ -18,27 +18,23 @@ const Footer = () => {
 
       <div className="flex flex-col items-center">
         <h1 className="heading lg:max-w-[45vw]">
-          prêt à élever <span className="text-purple">votre</span>
+          prêt à élever <span className="text-purple">votre </span>
           narration visuelle?
         </h1>
         <p className="text-white-200 md:mt-10 my-5 text-center">
-          Contactez-moi aujourd&lsquo;hui et discutons de la façon dont je
-          peux vous aider atteint tes objectifs.
+          Contactez-moi aujourd&lsquo;hui et discutons de la façon dont je peux
+          vous aider atteint tes objectifs.
         </p>
         <a href="mailto:ecom.yassine.bq@gmail.com">
           <MagicButton
-            title="Let's get in touch"
+            title="Prenons contact"
             icon={<FaLocationArrow />}
             position="right"
           />
         </a>
       </div>
       <div className="flex mt-16 md:flex-row flex-col justify-between items-center">
-        <p className="md:text-base text-sm md:font-normal font-light">
-          Copyright © 2024 Diabi Anas
-        </p>
-
-        <div className="flex items-center md:gap-3 gap-6">
+        <div className="flex items-center mb-9 md:gap-3 gap-6">
           {socialMedia.map((info) => (
             <a
               key={info.id}
@@ -51,6 +47,9 @@ const Footer = () => {
             </a>
           ))}
         </div>
+        <p className="md:text-base text-sm md:font-normal font-light">
+          Copyright © 2024 yassinebouaquil.com
+        </p>
       </div>
     </footer>
   );

@@ -1,9 +1,9 @@
 
 
 export const navItems = [
-  { name: "About", link: "#about" },
-  { name: "Projects", link: "#projects" },
-  { name: "Testimonials", link: "#testimonials" },
+  { name: "à propos", link: "#about" },
+  { name: "projets", link: "#projects" },
+  { name: "témoignages", link: "#testimonials" },
   { name: "Contact", link: "#contact" },
 ];
 
@@ -52,7 +52,7 @@ export const gridItems = [
 
   {
     id: 3,
-    title:"",
+    title: "",
     description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "object-cover w-full h-full",
@@ -61,7 +61,7 @@ export const gridItems = [
   },
   {
     id: 6,
-    title: "Do you want to start a project together?",
+    title: "Vous souhaitez démarrer un projet ensemble ?",
     description: "",
     className: "lg:col-span-2 md:col-span-3 mx-auto w-full md:row-span-1",
     imgClassName: "",
