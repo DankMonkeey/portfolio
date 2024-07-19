@@ -246,7 +246,8 @@ export const socialMedia = [
   },
   {
     id: 2,
-    img: "/twit.svg",
+    url: "https://wa.me/+0697887338",
+    img: "/wha.svg",
   },
   {
     id: 3,
